@@ -31,6 +31,7 @@
             android:id="@+id/textView"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_gravity="center"
             android:fontFamily="sans-serif-black"
             android:text="User:" />
@@ -40,6 +41,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:layout_margin="10dp"
             android:fontFamily="sans-serif-black"
             android:hint="EMAIL USER"
             android:inputType="textEmailAddress"
@@ -48,6 +50,7 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="150dp"
+            android:layout_margin="10dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
             android:text="Password:" />
@@ -57,6 +60,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:layout_margin="10dp"
             android:fontFamily="sans-serif-black"
             android:hint="PASSWORD"
             android:inputType="textPassword"
@@ -66,11 +70,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="204dp"
+            android:layout_margin="5dp"
+            android:layout_width="1dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:backgroundTint="#20FF06"
             android:drawableBottom="@android:drawable/btn_star"
@@ -79,7 +86,9 @@
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_width="1dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:backgroundTint="#20FF06"
             android:drawableBottom="@android:drawable/ic_menu_close_clear_cancel"
