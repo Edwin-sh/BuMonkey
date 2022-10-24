@@ -2,13 +2,11 @@
     <string name="app_name">BuMonkey</string>
     <string name="text_hello">Hello</string>
     <string name="text_button">Sing In</string>
-    <string name="title_activity_login24">Login2Activity4</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    // string activity login 3
+    <string name="textView_user">USER:</string>
+    <string name="Edttext_email_user">EMAIL USER</string>
+    <string name="textView_password">PASSWORD:</string>
+    <string name="Edttext_password">PASSWORD</string>
+    <string name="Btn_Login">LOG IN</string>
+    <string name="Btn_cancel">CANCEL</string>
 </resources>
