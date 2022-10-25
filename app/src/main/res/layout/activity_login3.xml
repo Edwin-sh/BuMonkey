@@ -82,6 +82,7 @@
             android:backgroundTint="#20FF06"
             android:drawableBottom="@android:drawable/btn_star"
             android:elevation="1000dp"
+            android:onClick="go"
             android:text="@string/Btn_Login" />
 
         <Button
@@ -93,7 +94,6 @@
             android:backgroundTint="#20FF06"
             android:drawableBottom="@android:drawable/ic_menu_close_clear_cancel"
             android:onClick="home"
-
             android:text="@string/Btn_cancel" />
     </LinearLayout>
 </LinearLayout>
