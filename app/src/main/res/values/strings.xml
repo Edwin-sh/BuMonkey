@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">BuMonkey</string>
-    <string name="text_hello">Hello</string>
-    <string name="text_button">Sing In</string>
+    <string name="app_name">BUMONKEY</string>
+    <string name="text_hello">WELCOME</string>
+    <string name="buttonlogin3">LOG IN</string>
+    <string name="buttonregistre2">REGISTER</string>
     // string activity login 3
     <string name="textView_user">USER:</string>
-    <string name="Edttext_email_user">EMAIL USER</string>
+    <string name="Edttext_email_user">INSERT USER</string>
     <string name="textView_password">PASSWORD:</string>
     <string name="Edttext_password">PASSWORD</string>
     <string name="Btn_Login">LOG IN</string>

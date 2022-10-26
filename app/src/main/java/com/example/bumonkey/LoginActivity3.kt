@@ -17,7 +17,7 @@ class LoginActivity3 : AppCompatActivity() {
         startActivity(cancel)
     }
 
-    fun go(buttoncancel:View){
+    fun go(buttonlogin:View){
         val login= Intent(this,GoActivity4::class.java)
         startActivity(login)
     }

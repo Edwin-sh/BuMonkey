@@ -10,8 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-    fun login(buttoncancel: View){
+    fun login(buttonlogin: View){
         val login= Intent(this,LoginActivity3::class.java)
         startActivity(login)
+    }
+    fun register(buttonregistre: View){
+        val register= Intent(this,RegistreActivity2::class.java)
+        startActivity(register)
     }
 }
