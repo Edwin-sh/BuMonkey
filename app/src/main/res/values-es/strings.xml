@@ -1,8 +1,14 @@
 <resources>
+    // string activity main
     <string name="app_name">BUMONKEY</string>
     <string name="text_hello">BIENVENIDO</string>
+    <string name="text_mess">¿Acabas de cobrar tu salario y ya no tienes dinero? ¿No sabes en que gastos se termino tu dinero? No te preocupes ingresa a  BUMONKEY y lograrás administrar mejor tus ingresos, para que puedas lograr todo lo sueños que te propongas. </string>
     <string name="buttonlogin3">INGRESAR</string>
     <string name="buttonregistre2">REGISTRARSE</string>
+
+    // string activity registre 2
+    <string name="buttonregistre3">REGISTRARSE</string>
+    <string name="Btn_cancel2">CANCELAR</string>
 
     // string activity login 3
     <string name="textView_user">USUARIO:</string>
@@ -11,4 +17,6 @@
     <string name="Edttext_password">CONTRASEÑA</string>
     <string name="Btn_Login">INGRESAR</string>
     <string name="Btn_cancel">CANCELAR</string>
+
+    // string activity go 4
 </resources>

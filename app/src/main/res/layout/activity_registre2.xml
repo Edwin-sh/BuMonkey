@@ -19,17 +19,43 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/bumonkey_icon" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="229dp"
         android:layout_margin="10dp"
         android:gravity="center"
-        android:orientation="vertical">
-    </LinearLayout>
+        android:orientation="vertical"></LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_height="82dp"
         android:layout_margin="5dp">
+
+        <Button
+            android:id="@+id/buttonlogin3"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#20FF06"
+            android:drawableBottom="@android:drawable/btn_star"
+            android:drawableTint="#FFD600"
+            android:elevation="1000dp"
+            android:onClick="login"
+            android:text="@string/buttonregistre3" />
+
+        <Button
+            android:id="@+id/buttoncancel3"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#20FF06"
+            android:drawableBottom="@android:drawable/ic_menu_close_clear_cancel"
+            android:drawableTint="#FB0505"
+            android:onClick="home"
+            android:text="@string/Btn_cancel2" />
     </LinearLayout>
 
 </LinearLayout>
