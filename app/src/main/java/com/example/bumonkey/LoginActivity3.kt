@@ -10,6 +10,7 @@ class LoginActivity3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login3)
+        setSupportActionBar(findViewById(R.id.header))
     }
 
     fun home(buttoncancel:View){

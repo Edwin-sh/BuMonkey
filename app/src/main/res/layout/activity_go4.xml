@@ -9,7 +9,16 @@
     android:orientation="vertical"
     tools:context=".GoActivity4">
 
-
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/header"
+        app:titleTextColor="@color/white"
+        android:background="#157f0d"
+        android:elevation="8dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="@string/app_name"/>
 
 
 </LinearLayout>
