@@ -5,9 +5,12 @@
     <string name="text_mess">¿Acabas de cobrar tu salario y ya no tienes dinero? ¿No sabes en que gastos se termino tu dinero? No te preocupes ingresa a  BUMONKEY y lograrás administrar mejor tus ingresos, para que puedas lograr todo lo sueños que te propongas. </string>
     <string name="buttonlogin3">INGRESAR</string>
     <string name="buttonregistre2">REGISTRARSE</string>
+    <string name="Toast_butt_login3">USUARIO VA INICIAR SESION</string>
+    <string name="Toast_butt_registre2">USUARIO VA REGISTRARSE</string>
 
     // string activity registre 2
     <string name="buttonregistre3">REGISTRARSE</string>
+    <string name="Toast_butt_registreOK">REGISTRO DE USUARIO OK INICIAR SESION</string>
     <string name="Btn_cancel2">CANCELAR</string>
 
     // string activity login 3
@@ -17,7 +20,15 @@
     <string name="Edttext_password">CONTRASEÑA</string>
     <string name="Btn_Login">INGRESAR</string>
     <string name="Btn_cancel">CANCELAR</string>
-    <string name="Alert_dialog_tittle">USUARIO/CONTRASEÑA INCORRECTO</string>
+    <string name="Toast_butt_cancel">USUARIO REGRESA A BIENVENIDA</string>
+    <string name="possitive_button">ENTRAR</string>
+    <string name="negative_button">CANCELAR</string>
+    <string name="Alert_dialog_tittle_pos">BIENVENIDO</string>
+    <string name="Alert_dialog_message_pos">USUARIO/CONTRASEÑA CORRECTO</string>
+    <string name="Toast_butt_pos">USUARIO INICIO SESION</string>
+    <string name="Alert_dialog_tittle_neg">ERROR</string>
+    <string name="Alert_dialog_message_neg">USUARIO/CONTRASEÑA INCORRECTO</string>
+    <string name="Toast_butt_neg">USUARIO CANCELO INGRESO</string>
 
     // string activity go 4
 </resources>

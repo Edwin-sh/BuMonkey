@@ -5,9 +5,12 @@
     <string name="text_mess">Did you just collect your salary and you no longer have money? Dont you know what expenses your money ended up in? Dont worry, enter BUMONKEY and you will be able to manage your income better, so that you can achieve all the dreams you set for yourself. </string>
     <string name="buttonlogin3">LOG IN</string>
     <string name="buttonregistre2">REGISTER</string>
+    <string name="Toast_butt_login3">USER LOG IN</string>
+    <string name="Toast_butt_registre2">USER REGISTRE</string>
 
     // string activity registre 2
     <string name="buttonregistre3">REGISTER</string>
+    <string name="Toast_butt_registreOK">USER REGISTRE OK, LOG IN</string>
     <string name="Btn_cancel2">CANCEL</string>
 
     // string activity login 3
@@ -17,7 +20,15 @@
     <string name="Edttext_password">PASSWORD</string>
     <string name="Btn_Login">LOG IN</string>
     <string name="Btn_cancel">CANCEL</string>
-    <string name="Alert_dialog_tittle">USER/PASSWORD INCORRECT</string>
+    <string name="Toast_butt_cancel">USER BACK TO WELCOME</string>
+    <string name="possitive_button">LOG IN</string>
+    <string name="negative_button">CANCEL</string>
+    <string name="Alert_dialog_tittle_pos">WELCOME</string>
+    <string name="Alert_dialog_message_pos">USER/PASSWORD ARE RIGHT</string>
+    <string name="Toast_butt_pos">USER LOG IN</string>
+    <string name="Alert_dialog_tittle_neg">ERROR</string>
+    <string name="Alert_dialog_message_neg">USER/PASSWORD INCORRECT</string>
+    <string name="Toast_butt_neg">USER CANCEL LOG IN</string>
 
     // string activity go 4
 </resources>
