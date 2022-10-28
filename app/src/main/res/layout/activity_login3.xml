@@ -43,7 +43,7 @@
             android:drawableStart="@android:drawable/ic_dialog_email"
             android:drawablePadding="5dp"
             android:drawableTint="#030404"
-            android:ems="1000000"
+            android:ems="100"
             android:fontFamily="sans-serif-black"
             android:gravity="center_horizontal"
             android:hint="@string/Edttext_email_user"

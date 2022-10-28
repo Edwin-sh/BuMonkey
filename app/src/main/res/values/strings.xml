@@ -17,6 +17,7 @@
     <string name="Edttext_password">PASSWORD</string>
     <string name="Btn_Login">LOG IN</string>
     <string name="Btn_cancel">CANCEL</string>
+    <string name="Alert_dialog_tittle">USER/PASSWORD INCORRECT</string>
 
     // string activity go 4
 </resources>

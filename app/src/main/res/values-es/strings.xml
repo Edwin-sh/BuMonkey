@@ -17,6 +17,7 @@
     <string name="Edttext_password">CONTRASEÑA</string>
     <string name="Btn_Login">INGRESAR</string>
     <string name="Btn_cancel">CANCELAR</string>
+    <string name="Alert_dialog_tittle">USUARIO/CONTRASEÑA INCORRECTO</string>
 
     // string activity go 4
 </resources>
