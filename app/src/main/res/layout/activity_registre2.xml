@@ -37,9 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:backgroundTint="#CBA0E1"
-            android:drawableBottom="@android:drawable/btn_star"
-            android:drawableTint="#FFD600"
+            android:backgroundTint="#92D4D4"
             android:elevation="1000dp"
             android:onClick="login"
             android:text="@string/buttonregistre3" />
@@ -50,9 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:backgroundTint="#CBA0E1"
-            android:drawableBottom="@android:drawable/ic_menu_close_clear_cancel"
-            android:drawableTint="#FB0505"
+            android:backgroundTint="#92D4D4"
             android:onClick="home"
             android:text="@string/Btn_cancel2" />
     </LinearLayout>

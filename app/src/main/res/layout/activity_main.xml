@@ -51,7 +51,7 @@
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#CBA0E1"
+            android:backgroundTint="#92D4D4"
             android:onClick="login"
             android:text="@string/buttonlogin3"
             android:textSize="20sp" />
@@ -61,7 +61,7 @@
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#CBA0E1"
+            android:backgroundTint="#92D4D4"
             android:onClick="register"
             android:text="@string/buttonregistre2"
             android:textSize="20sp" />
