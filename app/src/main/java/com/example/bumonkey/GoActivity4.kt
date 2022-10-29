@@ -2,11 +2,12 @@ package com.example.bumonkey
 
 import android.content.DialogInterface
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
+import androidx.appcompat.app.AlertDialog
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 
 class GoActivity4 : AppCompatActivity() {
@@ -14,6 +15,7 @@ class GoActivity4 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_go4)
         setSupportActionBar(findViewById(R.id.toolbar))
+        this.llamargastos(null)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -72,4 +74,24 @@ class GoActivity4 : AppCompatActivity() {
        // return super.onOptionsItemSelected(item)
     }
 
+    fun llamargastos(view: View?){
+        if (view!=null){
+            Toast.makeText(this, getString(R.string.Toast_expenses), Toast.LENGTH_SHORT).show()
+        }
+        supportFragmentManager.beginTransaction()
+            .setReorderingAllowed(true)
+            .replace(R.id.fragcontainer, gastos_fragment::class.java, null, "tarea")
+            .commit()
+    }
+
+    fun llamaringresos(view: View?){
+        if (view!=null){
+            Toast.makeText(this, getString(R.string.Toast_earnings), Toast.LENGTH_SHORT).show()
+        }
+
+        supportFragmentManager.beginTransaction()
+            .setReorderingAllowed(true)
+            .replace(R.id.fragcontainer, ingresos_fragment::class.java, null, "tarea2")
+            .commit()
+    }
 }
