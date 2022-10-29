@@ -6,17 +6,17 @@
     <item
         android:id="@+id/delete"
         android:icon="@android:drawable/ic_menu_delete"
-        android:title="delete"
+        android:title="@string/item_delete"
         app:showAsAction="never" />
     <item
         android:id="@+id/upload"
         android:icon="@android:drawable/ic_menu_upload"
-        android:title="upload"
+        android:title="@string/item_upload"
         app:showAsAction="never" />
     <item
         android:id="@+id/search"
         android:icon="@android:drawable/ic_menu_search"
-        android:title="search"
+        android:title="@string/item_edit"
         app:showAsAction="always" />
     <item
         android:id="@+id/help"
@@ -26,7 +26,7 @@
     <item
         android:id="@+id/edit"
         android:icon="@android:drawable/ic_menu_edit"
-        android:title="edit"
+        android:title="@string/item_edit"
         app:showAsAction="never" />
     <item
         android:id="@+id/email"
@@ -36,6 +36,6 @@
     <item
         android:id="@+id/exit"
         android:icon="@android:drawable/ic_menu_close_clear_cancel"
-        android:title="exit"
+        android:title="@string/item_exit"
         app:showAsAction="never" />
 </menu>

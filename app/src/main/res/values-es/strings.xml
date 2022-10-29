@@ -31,4 +31,34 @@
     <string name="Toast_butt_neg">USUARIO CANCELO INGRESO</string>
 
     // string activity go 4
+    <string name="Alert_dialog_tittle_help">AYUDA</string>
+    <string name="Alert_dialog_message_help">CONTACTENOS grupo3@bumonkey.com</string>
+    <string name="Toast_search">ENTRO AL ITEM BUSCAR</string>
+    <string name="Toast_edit">ENTRO AL ITEM EDITAR</string>
+    <string name="Toast_delete">ENTRO AL ITEM BORRAR</string>
+    <string name="Toast_email">ENTRO AL ITEM COMPARTIR</string>
+    <string name="Toast_upload">ENTRO AL ITEM CARGAR</string>
+    <string name="Alert_dialog_tittle_exit">SALIR</string>
+    <string name="Alert_dialog_message_exit">USUARIO REGRESA A BIENVENIDA</string>
+    <string name="Boton_expenses">GASTOS</string>
+    <string name="Boton_earnings">INGRESOS</string>
+    <string name="Toast_expenses">ACABAS DE INGRESAR AL MODULO DE GASTOS</string>
+    <string name="Toast_earnings">ACABAS DE INGRESAR AL MODULO DE INGRESOS</string>
+
+    // string menu
+    <string name="item_search">BUSCAR</string>
+    <string name="item_help">AYUDA</string>
+    <string name="item_email">CORREO</string>
+    <string name="item_delete">BORRAR</string>
+    <string name="item_upload">CARGAR</string>
+    <string name="item_edit">EDITAR</string>
+    <string name="item_exit">SALIR</string>
+
+    // string fragmentos
+    <string name="leasing">ARRIENDO</string>
+    <string name="credit">PRESTAMO/INTERESES</string>
+    <string name="transport">TRANSPORTE</string>
+    <string name="job">EMPLEO</string>
+    <string name="sales">VENTAS</string>
+    <string name="gift">REGALO</string>
 </resources>

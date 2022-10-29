@@ -31,4 +31,35 @@
     <string name="Toast_butt_neg">USER CANCEL LOG IN</string>
 
     // string activity go 4
+    <string name="Alert_dialog_tittle_help">HELP</string>
+    <string name="Alert_dialog_message_help">PLEASE CONTACT US grupo3@bumonkey.com</string>
+    <string name="Toast_search">ENTER ITEM SEARCH</string>
+    <string name="Toast_edit">ENTER ITEM EDIT</string>
+    <string name="Toast_delete">ENTER ITEM DELETE</string>
+    <string name="Toast_email">ENTER ITEM EMAIL</string>
+    <string name="Toast_upload">ENTER ITEM UPLOAD</string>
+    <string name="Alert_dialog_tittle_exit">CLOSE</string>
+    <string name="Alert_dialog_message_exit">USER BACK TO WELCOME</string>
+    <string name="Boton_expenses">EXPENSES</string>
+    <string name="Boton_earnings">EARNINGS</string>
+    <string name="Toast_expenses">YOU JUST ENTERED THE EXPENSE MODULE</string>
+    <string name="Toast_earnings">YOU JUST ENTERED THE EARNING MODULE</string>
+
+    // string menu
+    <string name="item_search">SEARCH</string>
+    <string name="item_help">HELP</string>
+    <string name="item_email">EMAIL</string>
+    <string name="item_delete">DELETE</string>
+    <string name="item_upload">UPLOAD</string>
+    <string name="item_edit">EDIT</string>
+    <string name="item_exit">EXIT</string>
+
+    // string fragmentos
+    <string name="leasing">LEASING</string>
+    <string name="credit">CREDIT/INTEREST</string>
+    <string name="transport">TRANSPORT</string>
+    <string name="job">JOB</string>
+    <string name="sales">SALES</string>
+    <string name="gift">GIFT</string>
+
 </resources>
