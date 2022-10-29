@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegistreActivity2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#92D4D4"
+        app:titleTextColor="@color/black"
+        app:title="@string/app_name"
+        android:elevation="20dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="242dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/bumonkey_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTexName"
+                android:layout_width="357dp"
+                android:layout_height="40dp"
+                android:layout_margin="0dp"
+                android:drawableStart="@drawable/ic_baseline_people_24"
+                android:drawablePadding="5dp"
+                android:drawableTint="#22A1A1"
+                android:fontFamily="fantasy"
+                android:gravity="left"
+                android:hint="@string/textname" />
+
+            <EditText
+                android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="357dp"
+                android:layout_height="41dp"
+
+                android:drawableStart="@android:drawable/ic_dialog_email"
+                android:drawablePadding="5dp"
+                android:drawableTint="#FF5722"
+                android:fontFamily="fantasy"
+                android:gravity="left"
+                android:hint="@string/textemail"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextTextcontraseña"
+                android:layout_width="357dp"
+                android:layout_height="41dp"
+                android:layout_margin="0dp"
+                android:drawableStart="@drawable/ic_baseline_password_24"
+                android:drawablePadding="5dp"
+                android:drawableTint="#E91E63"
+                android:fontFamily="fantasy"
+                android:gravity="left"
+                android:hint="@string/textcontraseña"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextTextcontraseñarepetir"
+                android:layout_width="357dp"
+                android:layout_height="41dp"
+                android:layout_margin="0dp"
+                android:drawableStart="@drawable/ic_baseline_password_24"
+                android:drawablePadding="5dp"
+                android:drawableTint="#E91E63"
+                android:fontFamily="fantasy"
+                android:gravity="left"
+                android:hint="@string/textcontraseña2"
+                android:minHeight="48dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="659dp"
+        android:layout_height="100dp"
+        android:layout_margin="0dp">
+
+        <Button
+            android:id="@+id/buttonlogin3"
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="#92D4D4"
+            android:elevation="1000dp"
+            android:onClick="login"
+            android:text="@string/buttonregistre3" />
+
+        <Button
+            android:id="@+id/buttoncancel3"
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#92D4D4"
+            android:onClick="home"
+            android:text="@string/Btn_cancel2" />
+    </LinearLayout>
+
+</LinearLayout>
