@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegistreActivity2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#92D4D4"
+        android:elevation="20dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            app:srcCompat="@drawable/bumonkey_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTexName"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="2dp"
+                android:drawableStart="@drawable/ic_baseline_people_24"
+                android:drawablePadding="5dp"
+                android:drawableTint="#22A1A1"
+                android:fontFamily="fantasy"
+                android:gravity="left"
+                android:hint="@string/textname"
+                android:textSize="48sp" />
+
+            <EditText
+                android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="0dp"
+                android:drawableStart="@android:drawable/ic_dialog_email"
+                android:drawablePadding="5dp"
+                android:drawableTint="#FF5722"
+                android:fontFamily="fantasy"
+                android:gravity="left"
+                android:hint="@string/textemail"
+                android:minHeight="48dp"
+                android:textSize="48sp" />
+
+            <EditText
+                android:id="@+id/editTextTextcontraseña"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="0dp"
+                android:drawableStart="@drawable/ic_baseline_password_24"
+                android:drawablePadding="5dp"
+                android:drawableTint="#E91E63"
+                android:fontFamily="fantasy"
+                android:gravity="left"
+                android:hint="@string/textcontraseña"
+                android:minHeight="48dp"
+                android:textSize="48sp" />
+
+            <EditText
+                android:id="@+id/editTextTextcontraseñarepetir"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="0dp"
+                android:drawableStart="@drawable/ic_baseline_password_24"
+                android:drawablePadding="5dp"
+                android:drawableTint="#E91E63"
+                android:fontFamily="fantasy"
+                android:gravity="left"
+                android:hint="@string/textcontraseña2"
+                android:minHeight="48dp"
+                android:textSize="48sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_margin="0dp">
+
+            <Button
+                android:id="@+id/buttonlogin3"
+                android:layout_width="1dp"
+                android:layout_height="200dp"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="#92D4D4"
+                android:elevation="1000dp"
+                android:onClick="login"
+                android:text="@string/buttonregistre3"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/buttoncancel3"
+                android:layout_width="1dp"
+                android:layout_height="200dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#92D4D4"
+                android:onClick="home"
+                android:text="@string/Btn_cancel2"
+                android:textSize="34sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
