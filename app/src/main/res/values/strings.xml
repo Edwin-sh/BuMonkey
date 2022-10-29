@@ -9,9 +9,14 @@
     <string name="Toast_butt_registre2">USER REGISTRE</string>
 
     // string activity registre 2
+    <string name="textname">NAME AND LASTNAME </string>
+    <string name="textemail">EMAIL</string>
+    <string name="textcontraseña">PASSWORD</string>
+    <string name="textcontraseña2">REPEAT PASSWORD</string>
     <string name="buttonregistre3">REGISTER</string>
     <string name="Toast_butt_registreOK">USER REGISTRE OK, LOG IN</string>
     <string name="Btn_cancel2">CANCEL</string>
+
 
     // string activity login 3
     <string name="textView_user">USER:</string>
@@ -62,7 +67,7 @@
     <string name="sales">SALES</string>
     <string name="gift">GIFT</string>
 
-    //string registre2
+
 
 
 </resources>

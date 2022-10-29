@@ -23,19 +23,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:layout_marginTop="30dp"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            app:srcCompat="@drawable/bumonkey_icon" />
+            android:layout_height="130dp"
+           app:srcCompat="@drawable/bumonkey_icon" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="404dp"
-        android:layout_margin="3dp"
+        android:layout_margin="5dp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -56,7 +57,7 @@
                 android:drawableTint="#22A1A1"
                 android:fontFamily="fantasy"
                 android:gravity="left"
-                android:hint="nombre y apellidos" />
+                android:hint="@string/textname" />
 
             <EditText
                 android:id="@+id/editTextTextEmailAddress"
@@ -68,7 +69,7 @@
                 android:drawableTint="#FF5722"
                 android:fontFamily="fantasy"
                 android:gravity="left"
-                android:hint="email"
+                android:hint="@string/textemail"
                 android:minHeight="48dp" />
 
             <EditText
@@ -81,7 +82,7 @@
                 android:drawableTint="#E91E63"
                 android:fontFamily="fantasy"
                 android:gravity="left"
-                android:hint="contraseña"
+                android:hint="@string/textcontraseña"
                 android:minHeight="48dp" />
 
             <EditText
@@ -94,7 +95,7 @@
                 android:drawableTint="#E91E63"
                 android:fontFamily="fantasy"
                 android:gravity="left"
-                android:hint="repita la contraseña"
+                android:hint="@string/textcontraseña2"
                 android:minHeight="48dp" />
 
 
