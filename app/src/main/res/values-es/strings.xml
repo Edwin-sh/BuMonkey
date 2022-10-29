@@ -31,4 +31,13 @@
     <string name="Toast_butt_neg">USUARIO CANCELO INGRESO</string>
 
     // string activity go 4
+    <string name="Alert_dialog_tittle_help">AYUDA</string>
+    <string name="Alert_dialog_message_help">CONTACTENOS grupo3@bumonkey.com</string>
+    <string name="Toast_search">ENTRO AL ITEM BUSCAR</string>
+    <string name="Toast_edit">ENTRO AL ITEM EDITAR</string>
+    <string name="Toast_delete">ENTRO AL ITEM BORRAR</string>
+    <string name="Toast_email">ENTRO AL ITEM COMPARTIR</string>
+    <string name="Toast_upload">ENTRO AL ITEM CARGAR</string>
+    <string name="Alert_dialog_tittle_exit">SALIR</string>
+    <string name="Alert_dialog_message_exit">USUARIO REGRESA A BIENVENIDA</string>
 </resources>

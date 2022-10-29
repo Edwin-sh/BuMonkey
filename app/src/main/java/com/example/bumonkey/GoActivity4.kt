@@ -26,43 +26,43 @@ class GoActivity4 : AppCompatActivity() {
         R.id.help->{
             val positiveButton={ dialog: DialogInterface, entero:Int-> }
 
-            val alert = AlertDialog.Builder(this).setTitle("HELP")
-                .setMessage("PLEASE CONTACT US grupo3@bumonkey.com")
+            val alert = AlertDialog.Builder(this).setTitle(R.string.Alert_dialog_tittle_help)
+                .setMessage(R.string.Alert_dialog_message_help)
                 .setPositiveButton("OK",positiveButton)
                 .create().show()
             true
         }
 
         R.id.search->{
-            Toast.makeText(this,"entro al item buscar",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,R.string.Toast_search,Toast.LENGTH_LONG).show()
             true
         }
 
         R.id.edit->{
-            Toast.makeText(this,"entro al item editar",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,R.string.Toast_edit,Toast.LENGTH_LONG).show()
             true
         }
 
         R.id.delete->{
-            Toast.makeText(this,"entro al item eliminar",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,R.string.Toast_delete,Toast.LENGTH_LONG).show()
             true
         }
 
         R.id.email->{
-            Toast.makeText(this,"entro al item compartir",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,R.string.Toast_email,Toast.LENGTH_LONG).show()
             true
         }
 
         R.id.upload->{
-            Toast.makeText(this,"entro al item subir",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,R.string.Toast_upload,Toast.LENGTH_LONG).show()
             true
         }
 
         R.id.exit->{
-            Toast.makeText(this,"SALIR",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,R.string.Alert_dialog_tittle_exit,Toast.LENGTH_LONG).show()
             val exit= Intent(this,MainActivity::class.java)
             startActivity(exit)
-            Toast.makeText(this,R.string.Toast_butt_cancel, Toast.LENGTH_LONG).show()
+            Toast.makeText(this,R.string.Alert_dialog_message_exit, Toast.LENGTH_LONG).show()
             true
         }
         else->{
