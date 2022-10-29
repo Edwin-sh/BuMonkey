@@ -46,7 +46,8 @@
             android:layout_margin="5dp"
             android:fontFamily="sans-serif-black"
             android:gravity="center_horizontal"
-            android:text="@string/textView_user" />
+            android:text="@string/textView_user"
+            android:textSize="34sp" />
 
         <EditText
             android:id="@+id/editTextTextEmailAddress"
@@ -60,6 +61,7 @@
             android:fontFamily="sans-serif-black"
             android:gravity="center_horizontal"
             android:hint="@string/Edttext_email_user"
+            android:textSize="34sp"
             android:inputType="textAutoCorrect|textMultiLine|textAutoComplete|textEmailAddress"
             android:minHeight="48dp" />
 
@@ -68,6 +70,7 @@
             android:layout_width="265dp"
             android:layout_height="111dp"
             android:layout_margin="5dp"
+            android:textSize="34sp"
             android:fontFamily="sans-serif-black"
             android:gravity="center_horizontal"
             android:text="@string/textView_password" />
@@ -80,6 +83,7 @@
             android:drawableStart="@android:drawable/ic_lock_idle_lock"
             android:drawablePadding="5dp"
             android:drawableTint="#101010"
+            android:textSize="34sp"
             android:ems="10"
             android:fontFamily="sans-serif-black"
             android:gravity="center_horizontal"
@@ -100,6 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
+            android:textSize="34sp"
             android:backgroundTint="#92D4D4"
             android:elevation="1000dp"
             android:onClick="go"
@@ -111,6 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
+            android:textSize="34sp"
             android:backgroundTint="#92D4D4"
             android:onClick="home"
             android:text="@string/Btn_cancel" />
