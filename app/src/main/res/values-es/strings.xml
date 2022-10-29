@@ -53,4 +53,12 @@
     <string name="item_upload">CARGAR</string>
     <string name="item_edit">EDITAR</string>
     <string name="item_exit">SALIR</string>
+
+    // string fragmentos
+    <string name="leasing">ARRIENDO</string>
+    <string name="credit">PRESTAMO/INTERESES</string>
+    <string name="transport">TRANSPORTE</string>
+    <string name="job">EMPLEO</string>
+    <string name="sales">VENTAS</string>
+    <string name="gift">REGALO</string>
 </resources>
