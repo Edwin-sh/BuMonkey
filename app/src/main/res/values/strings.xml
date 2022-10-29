@@ -53,4 +53,13 @@
     <string name="item_upload">UPLOAD</string>
     <string name="item_edit">EDIT</string>
     <string name="item_exit">EXIT</string>
+
+    // string fragmentos
+    <string name="leasing">LEASING</string>
+    <string name="credit">CREDIT/INTEREST</string>
+    <string name="transport">TRANSPORT</string>
+    <string name="job">JOB</string>
+    <string name="sales">SALES</string>
+    <string name="gift">GIFT</string>
+
 </resources>
