@@ -9,13 +9,21 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar
 
 class GoActivity4 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_go4)
         setSupportActionBar(findViewById(R.id.toolbar))
-        this.llamargastos(null)
+
+
+        val btnFlotane : View = findViewById(R.id.btnFlotante)
+        btnFlotane.setOnClickListener { view ->
+            Snackbar.make(view, "este es un snackbar", Snackbar.LENGTH_LONG)
+                .setAction("Action", null)
+                .show()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
