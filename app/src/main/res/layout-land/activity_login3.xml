@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity3">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#92D4D4"
+        android:elevation="20dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="245dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="340dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/bumonkey_icon" />
+
+        <LinearLayout
+            android:layout_width="282dp"
+            android:layout_height="240dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:text="@string/textView_user" />
+
+            <EditText
+                android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableStart="@android:drawable/ic_dialog_email"
+                android:drawablePadding="5dp"
+                android:drawableTint="#030404"
+                android:ems="100"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:hint="@string/Edttext_email_user"
+                android:inputType="textAutoCorrect|textMultiLine|textAutoComplete|textEmailAddress"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:text="@string/textView_password" />
+
+            <EditText
+                android:id="@+id/editTextTextPassword"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableStart="@android:drawable/ic_lock_idle_lock"
+                android:drawablePadding="5dp"
+                android:drawableTint="#101010"
+                android:ems="10"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:hint="@string/Edttext_password"
+                android:inputType="textPassword|textAutoComplete"
+                android:minHeight="48dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="683dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp">
+
+        <Button
+            android:id="@+id/buttonlogin3"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#92D4D4"
+            android:elevation="1000dp"
+            android:onClick="go"
+            android:text="@string/Btn_Login" />
+
+        <Button
+            android:id="@+id/buttoncancel3"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#92D4D4"
+            android:onClick="home"
+            android:text="@string/Btn_cancel" />
+    </LinearLayout>
+</LinearLayout>
