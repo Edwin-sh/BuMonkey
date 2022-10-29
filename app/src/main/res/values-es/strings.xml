@@ -9,6 +9,10 @@
     <string name="Toast_butt_registre2">USUARIO VA REGISTRARSE</string>
 
     // string activity registre 2
+    <string name="textname">NOMBRES Y APELLIDOS </string>
+    <string name="textemail">EMAIL</string>
+    <string name="textcontraseña">CONTRASEÑA</string>
+    <string name="textcontraseña2">REPITA CONTRASEÑA</string>
     <string name="buttonregistre3">REGISTRARSE</string>
     <string name="Toast_butt_registreOK">REGISTRO DE USUARIO OK INICIAR SESION</string>
     <string name="Btn_cancel2">CANCELAR</string>
