@@ -5,21 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B5F8B7"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:minHeight="?attr/actionBarSize"
-        android:background="#92D4D4"
-        app:titleTextColor="@color/black"
-        app:title="@string/app_name"
-        android:elevation="20dp"
+        android:id="@+id/header"
+        app:titleTextColor="@color/white"
+        android:background="#157f0d"
+        android:elevation="8dp"
         app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
-
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="@string/app_name"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="256dp"
@@ -29,12 +28,13 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/bumonkey_icon" />
+            app:srcCompat="@drawable/bumonkey_icon"
+            android:layout_margin="16dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="224dp"
+        android:layout_height="100dp"
         android:layout_margin="10dp"
         android:gravity="center"
         android:orientation="vertical">
@@ -42,41 +42,37 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:text="@string/text_hello"
-            android:textSize="20dp" />
-
-        <TextView
-            android:id="@+id/textViewmessage"
-            android:layout_width="match_parent"
-            android:layout_height="125dp"
-            android:text="@string/text_mess" />
+            android:textSize="20dp"
+            android:layout_margin="10dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="73dp"
+        android:layout_height="210dp"
         android:layout_margin="5dp">
 
         <Button
             android:id="@+id/buttonlogin3"
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
+            android:layout_width="336dp"
+            android:layout_height="115dp"
+            android:layout_margin="40dp"
             android:layout_weight="1"
-            android:backgroundTint="#92D4D4"
+            android:backgroundTint="#20FF06"
             android:onClick="login"
             android:text="@string/buttonlogin3"
-            android:textSize="20sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/buttonregistre2"
-            android:layout_width="1dp"
+            android:layout_width="367dp"
             android:layout_height="wrap_content"
+            android:layout_margin="40dp"
             android:layout_weight="1"
-            android:backgroundTint="#92D4D4"
+            android:backgroundTint="#20FF06"
             android:onClick="register"
             android:text="@string/buttonregistre2"
-            android:textSize="20sp" />
+            android:textSize="40sp" />
 
     </LinearLayout>
 </LinearLayout>

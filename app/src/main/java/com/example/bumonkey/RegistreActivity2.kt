@@ -10,6 +10,7 @@ class RegistreActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registre2)
+        setSupportActionBar(findViewById(R.id.header))
     }
     fun home(buttoncancel: View) {
         val cancel = Intent(this, MainActivity::class.java)
