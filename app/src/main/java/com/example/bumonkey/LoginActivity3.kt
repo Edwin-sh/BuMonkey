@@ -41,7 +41,7 @@ class LoginActivity3 : AppCompatActivity() {
             Toast.makeText(this,R.string.Toast_butt_neg,Toast.LENGTH_LONG).show()
         }
 
-        if (username == "grupo3@bumonkey.com" && password == "bumonkeyGP3") {
+        if (username == "juan" && password == "1234") {
             val alert = AlertDialog.Builder(this).setTitle(R.string.Alert_dialog_tittle_pos)
                 .setMessage(R.string.Alert_dialog_message_pos)
                 .setPositiveButton(R.string.possitive_button,positiveButton)
