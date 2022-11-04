@@ -16,6 +16,7 @@ class GoActivity4 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_go4)
         setSupportActionBar(findViewById(R.id.toolbar))
+        llamargastos(null)
 
 
         val btnFlotane : View = findViewById(R.id.btnFlotante)
@@ -75,6 +76,7 @@ class GoActivity4 : AppCompatActivity() {
             Toast.makeText(this,R.string.Alert_dialog_message_exit, Toast.LENGTH_LONG).show()
             true
         }
+
         else->{
             super.onOptionsItemSelected(item)
         }
