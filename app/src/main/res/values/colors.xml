@@ -12,5 +12,7 @@
     <color name="button3">#92D4D4</color>
     <color name="pink_500">#E13B74</color>
     <color name="greeen_100">#b5dea5</color>
+    <color name="gray_100">#aeaeae</color>
+
 
 </resources>
