@@ -40,9 +40,15 @@ class home_activity : AppCompatActivity() {
 
         val btnFlotane: View = findViewById(R.id.btnFlotante)
         btnFlotane.setOnClickListener { view ->
-            Snackbar.make(view, "este es un snackbar", Snackbar.LENGTH_LONG)
+            val positiveButton = { dialog: DialogInterface, entero: Int -> }
+
+            val alert = AlertDialog.Builder(this).setTitle(R.string.Alert_dialog_tittle_help)
+                .setMessage(R.string.Alert_dialog_message_help)
+                .setPositiveButton("OK", positiveButton)
+                .create().show()
+           /* Snackbar.make(view, "este es un snackbar", Snackbar.LENGTH_LONG)
                 .setAction("Action", null)
-                .show()
+                .show()*/
         }
     }
 
@@ -59,7 +65,7 @@ class home_activity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
 
-        R.id.help -> {
+        /*R.id.help -> {
             val positiveButton = { dialog: DialogInterface, entero: Int -> }
 
             val alert = AlertDialog.Builder(this).setTitle(R.string.Alert_dialog_tittle_help)
@@ -67,7 +73,7 @@ class home_activity : AppCompatActivity() {
                 .setPositiveButton("OK", positiveButton)
                 .create().show()
             true
-        }
+        }*/
 
         R.id.search -> {
             Toast.makeText(this, R.string.Toast_search, Toast.LENGTH_LONG).show()
