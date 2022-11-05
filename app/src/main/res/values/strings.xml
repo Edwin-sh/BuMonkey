@@ -67,7 +67,11 @@
     <string name="sales">SALES</string>
     <string name="gift">GIFT</string>
 
-
+    //string nav_bar
+    <string name="txt_tarea_1">Ir al mercado</string>
+    <string name="txt_tarea_2">Llevar Carro a Mantenimiento</string>
+    <string name="txt_tarea_3">Ir a Lavandería</string>
+    <string name="txt_about">sobre</string>
 
 
 </resources>

@@ -32,7 +32,7 @@ class LoginActivity3 : AppCompatActivity() {
         var password: String = edtpassword!!.text.toString()
 
         val positiveButton={ dialog:DialogInterface,entero:Int->
-            val login = Intent(this, GoActivity4::class.java)
+            val login = Intent(this, home_activity::class.java)
             startActivity(login)
             Toast.makeText(this,R.string.Toast_butt_pos,Toast.LENGTH_LONG).show()
 
