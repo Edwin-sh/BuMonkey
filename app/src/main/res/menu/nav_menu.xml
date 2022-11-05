@@ -5,11 +5,11 @@
 
     <item
         android:id="@+id/nav_item_gastos"
-        android:icon="@android:drawable/ic_menu_info_details"
+        android:icon="@android:drawable/ic_input_delete"
         android:title="@string/Boton_expenses"/>
 
     <item
         android:id="@+id/nav_item_ingresos"
-        android:icon="@android:drawable/ic_menu_agenda"
+        android:icon="@android:drawable/ic_menu_add"
         android:title="@string/Boton_earnings"/>
 </menu>
