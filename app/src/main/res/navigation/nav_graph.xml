@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/nav_item_gastos">
-
-    <fragment
+    <activity
         tools:layout="@layout/fragment_gastos"
         android:id="@+id/nav_item_gastos"
         android:name="com.example.bumonkey.gastos_fragment"
         android:label="gastos_fragment" />
-    <fragment
-        tools:layout="@layout/fragment_ingresos"
+
+    <activity
+        tools:layout="@layout/recycle"
         android:id="@+id/nav_item_ingresos"
-        android:name="com.example.bumonkey.ingresos_fragment"
-        android:label="ingresos_fragment" />
+        android:name="com.example.bumonkey.adapter.IngresosViewHolder"
+        android:label="reingresos" />
 </navigation>

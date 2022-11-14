@@ -15,8 +15,10 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.bumonkey.adapter.IngresosAdapter
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
 
 class home_activity : AppCompatActivity() {
     private lateinit var appbarConfiguration: AppBarConfiguration
@@ -115,6 +117,7 @@ class home_activity : AppCompatActivity() {
 
         R.id.nav_item_ingresos->{
             llamaringresos(null)
+
             true
         }
 
@@ -134,7 +137,18 @@ class home_activity : AppCompatActivity() {
             .replace(R.id.fragcontainer, gastos_fragment::class.java, null, "tarea")
             .commit()
     }
+    fun llamaringresos(view: View?) {
+        if (view != null) {
+            Toast.makeText(this, getString(R.string.Toast_expenses), Toast.LENGTH_SHORT).show()
+        }
 
+        val recyclerView=findViewById<RecyclerView>(R.id.reingresos)
+        recyclerView.layoutManager= LinearLayoutManager(this)
+        recyclerView.adapter= IngresosAdapter(ingresosProvider.ingresoslist)
+
+
+    }
+    /*
     fun llamaringresos(view: View?) {
         if (view != null) {
             Toast.makeText(this, getString(R.string.Toast_earnings), Toast.LENGTH_SHORT).show()
@@ -145,6 +159,6 @@ class home_activity : AppCompatActivity() {
             .replace(R.id.fragcontainer, ingresos_fragment::class.java, null, "tarea2")
             .commit()
     }
-
+    */
 
 }
