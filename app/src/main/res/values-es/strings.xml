@@ -65,6 +65,9 @@
     <string name="job">EMPLEO</string>
     <string name="sales">VENTAS</string>
     <string name="gift">REGALO</string>
+    <string name="bonus">PRIMA</string>
+    <string name="subsidy">SUBSIDIO</string>
+    <string name="other">OTRO</string>
 
     //string nav_bar
     <string name="txt_tarea_1">Ir al mercado</string>

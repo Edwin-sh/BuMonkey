@@ -5,9 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.bumonkey.adapter.IngresosAdapter
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,14 +22,6 @@ class MainActivity : AppCompatActivity() {
         val register= Intent(this,RegistreActivity2::class.java)
         startActivity(register)
         Toast.makeText(this,R.string.Toast_butt_registre2, Toast.LENGTH_LONG).show()
-    }
-
-    fun iniciarrecycler(){
-        val recyclerView=findViewById<RecyclerView>(R.id.reingresos)
-        recyclerView.layoutManager=LinearLayoutManager(this)
-        recyclerView.adapter=IngresosAdapter(ingresosProvider.ingresoslist)
-
-
     }
 
 }

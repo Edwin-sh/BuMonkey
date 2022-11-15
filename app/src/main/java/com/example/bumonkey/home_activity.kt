@@ -15,9 +15,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.bumonkey.adapter.IngresosAdapter
 import com.google.android.material.navigation.NavigationView
 
 class home_activity : AppCompatActivity() {
@@ -27,7 +24,8 @@ class home_activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         setSupportActionBar(findViewById(R.id.toolbar))
-        //llamargastos(null)
+
+        //llamaringresos(null)
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
@@ -110,16 +108,16 @@ class home_activity : AppCompatActivity() {
             true
         }
 
-        R.id.nav_item_gastos->{
+        /*R.id.nav_item_gastos->{
             llamargastos(null)
             true
-        }
+        }*/
 
-        R.id.nav_item_ingresos->{
+        /*R.id.nav_item_ingresos->{
             llamaringresos(null)
 
             true
-        }
+        }*/
 
         else -> {
             super.onOptionsItemSelected(item)
@@ -128,7 +126,7 @@ class home_activity : AppCompatActivity() {
         // return super.onOptionsItemSelected(item)
     }
 
-    fun llamargastos(view: View?) {
+    /*fun llamargastos(view: View?) {
         if (view != null) {
             Toast.makeText(this, getString(R.string.Toast_expenses), Toast.LENGTH_SHORT).show()
         }
@@ -136,18 +134,22 @@ class home_activity : AppCompatActivity() {
             .setReorderingAllowed(true)
             .replace(R.id.fragcontainer, gastos_fragment::class.java, null, "tarea")
             .commit()
-    }
-    fun llamaringresos(view: View?) {
+    }*/
+    /*fun llamaringresos(view: View?) {
         if (view != null) {
             Toast.makeText(this, getString(R.string.Toast_expenses), Toast.LENGTH_SHORT).show()
         }
 
-        val recyclerView=findViewById<RecyclerView>(R.id.reingresos)
+        supportFragmentManager.beginTransaction()
+            .setReorderingAllowed(true)
+            .replace(R.id.fragcontainer, ingresos_fragment::class.java, null, "tarea2")
+            .commit()
+
+        /*val recyclerView=findViewById<RecyclerView>(R.id.reingresos)
         recyclerView.layoutManager= LinearLayoutManager(this)
-        recyclerView.adapter= IngresosAdapter(ingresosProvider.ingresoslist)
+        recyclerView.adapter= IngresosAdapter(ingresosProvider.ingresoslist)*/
 
-
-    }
+    }*/
     /*
     fun llamaringresos(view: View?) {
         if (view != null) {
