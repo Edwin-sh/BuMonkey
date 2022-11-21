@@ -5,9 +5,9 @@
     android:id="@+id/list"
     android:name="com.example.bumonkey.historico"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
+    android:layout_height="350dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".historico"
-    tools:listitem="@layout/fragment_historico" />
+    tools:context=".fragments.TiposIngresosFragment"
+    tools:listitem="@layout/fragment_item_tipo" />

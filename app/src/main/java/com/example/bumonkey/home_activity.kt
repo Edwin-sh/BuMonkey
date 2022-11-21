@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -17,6 +18,8 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.bumonkey.database.mySQLiteHelper
 import com.example.bumonkey.fragments.GastosFragment
 import com.example.bumonkey.fragments.IngresosFragment
+import com.example.bumonkey.fragments.TiposGastosFragment
+import com.example.bumonkey.fragments.TiposIngresosFragment
 import com.google.android.material.navigation.NavigationView
 
 class home_activity : AppCompatActivity() {
@@ -45,8 +48,27 @@ class home_activity : AppCompatActivity() {
         val btnFlotane: View = findViewById(R.id.btnFlotante)
         btnFlotane.setOnClickListener { view ->
             contexto(view)
-            bumonkeyDBHelper.crear_Datos_Iniciales()
         }
+
+        /*supportFragmentManager.registerFragmentLifecycleCallbacks(object:FragmentManager.FragmentLifecycleCallbacks(){
+            override fun onFragmentViewCreated(
+                fm: FragmentManager,
+                f: Fragment,
+                v: View,
+                savedInstanceState: Bundle?
+            ) {
+
+                when(supportFragmentManager.findFragmentById(R.id.fragcontainer)?.childFragmentManager?.fragments?.get(0)){
+                    is TiposGastosFragment-> {navView.visibility= View.GONE}
+                    is TiposIngresosFragment-> {navView.visibility= View.GONE}
+                    is GastosFragment-> {navView.visibility= View.VISIBLE}
+                    is IngresosFragment-> {navView.visibility= View.VISIBLE}
+                    else->{
+                        navView.visibility= View.GONE
+                    }
+                }
+            }
+        },true)*/
     }
 
 
@@ -112,6 +134,10 @@ class home_activity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        supportFragmentManager.popBackStack()
+    }
+
     fun contexto(view:View){
         val NavHostFrag: NavHostFragment= supportFragmentManager.findFragmentById(R.id.fragcontainer) as NavHostFragment
         val frag: Fragment? =NavHostFrag.childFragmentManager?.fragments?.get(0)
@@ -119,11 +145,16 @@ class home_activity : AppCompatActivity() {
         if (frag is GastosFragment){
         Toast.makeText(/* context = */ this, "Es gasto",/* text = */
             Toast.LENGTH_SHORT).show()
+            val fragm=supportFragmentManager.beginTransaction()
+            fragm.replace(R.id.fragcontainer, TiposGastosFragment()).addToBackStack(null)
+            fragm.commit()
 
         }else if(frag is IngresosFragment)
-        {
-            Toast.makeText(/* context = */ this, "Es ingreso",/* text = */
-                Toast.LENGTH_SHORT).show()
+        {Toast.makeText(/* context = */ this, "Es ingreso",/* text = */
+            Toast.LENGTH_SHORT).show()
+            val fragm=supportFragmentManager.beginTransaction()
+            fragm.replace(R.id.fragcontainer, TiposIngresosFragment()).addToBackStack(null)
+            fragm.commit()
         }
     }
 

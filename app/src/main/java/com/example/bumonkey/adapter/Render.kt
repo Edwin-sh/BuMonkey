@@ -1,7 +1,6 @@
 package com.example.bumonkey.adapter
 
 import com.example.bumonkey.R
-import com.example.bumonkey.entidades.Gastos
 
 class Render(){
     fun setImage(nombre:String): Int {

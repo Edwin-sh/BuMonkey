@@ -11,7 +11,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.bumonkey.R
-import com.example.bumonkey.providers.GastosProvider
 import com.example.bumonkey.adapter.GastosRecyclerViewAdapter
 import com.example.bumonkey.adapter.IngresosRecyclerViewAdapter
 import com.example.bumonkey.database.mySQLiteHelper
