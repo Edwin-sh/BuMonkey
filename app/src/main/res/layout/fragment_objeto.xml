@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:elevation="5dp" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_constraintTop_toTopOf="parent"
+            android:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <TextView
+            android:id="@+id/textname"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_constraintStart_toEndOf="@+id/image2"
+            android:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/teal_700"
+            android:textSize="25dp"
+            android:textStyle="normal"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <TextView
+            android:id="@+id/textsigno"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_constraintStart_toEndOf="@+id/textname"
+            android:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:text="$"
+            android:textColor="@color/purple_700"
+            android:textSize="18dp"
+            android:textStyle="normal"
+            tools:layout_editor_absoluteX="190dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <EditText
+            android:id="@+id/textvalue"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_constraintStart_toEndOf="@+id/textsigno"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="30dp"
+            android:ems="5"
+            android:gravity="center"
+            android:inputType="number"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
