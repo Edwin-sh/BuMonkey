@@ -31,7 +31,7 @@ class IngresosFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_ingresos_list, container, false)
+        val view = inflater.inflate(R.layout.fragment_show_list, container, false)
 
         // Set the adapter
         if (view is RecyclerView) {

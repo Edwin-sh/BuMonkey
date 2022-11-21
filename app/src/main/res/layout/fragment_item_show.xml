@@ -15,7 +15,7 @@
         android:layout_gravity="center_vertical"
         android:padding="10dp">
         <ImageView
-            android:id="@+id/imageningresos"
+            android:id="@+id/image"
             android:layout_width="70dp"
             android:layout_height="70dp"
             app:layout_constraintTop_toTopOf="parent"
@@ -23,7 +23,7 @@
             android:src="@drawable/ic_launcher_background"/>
 
         <TextView
-            android:id="@+id/textingresos"
+            android:id="@+id/textname"
             android:layout_width="100dp"
             android:layout_height="45dp"
             android:layout_marginStart="25dp"
@@ -33,11 +33,11 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:gravity="center"
-            app:layout_constraintStart_toEndOf="@+id/imageningresos"
+            app:layout_constraintStart_toEndOf="@+id/image"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/editTextNumber1"
+        <TextView
+            android:id="@+id/textvalue"
             android:layout_width="100dp"
             android:layout_height="45dp"
             android:layout_marginStart="25dp"
@@ -46,7 +46,7 @@
             android:inputType="number"
             android:textSize="20sp"
             android:gravity="center"
-            app:layout_constraintStart_toEndOf="@+id/textingresos"
+            app:layout_constraintStart_toEndOf="@+id/textname"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

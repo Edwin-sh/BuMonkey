@@ -8,13 +8,13 @@
     <fragment
         android:id="@+id/nav_item_ingresos"
         android:name="com.example.bumonkey.fragments.IngresosFragment"
-        android:label="fragment_item_list"
-        tools:layout="@layout/fragment_ingresos_list" />
+        android:label="Resumen Ingresos"
+        tools:layout="@layout/fragment_show_list" />
     <fragment
         android:id="@+id/nav_item_gastos"
         android:name="com.example.bumonkey.fragments.GastosFragment"
-        android:label="fragment_gastos_list"
-        tools:layout="@layout/fragment_gastos_list" />
+        android:label="Resumen Gastos"
+        tools:layout="@layout/fragment_show_list" />
 
 
 </navigation>

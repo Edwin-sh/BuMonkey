@@ -2,19 +2,29 @@ package com.example.bumonkey
 
 import android.content.DialogInterface
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.findFragment
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.navArgument
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.bumonkey.fragments.GastosFragment
+import com.example.bumonkey.fragments.IngresosFragment
 import com.google.android.material.navigation.NavigationView
 
 class home_activity : AppCompatActivity() {
@@ -38,7 +48,7 @@ class home_activity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appbarConfiguration)
         navView.setupWithNavController(navController)
 
-        val btnFlotane: View = findViewById(R.id.btnFlotante)
+        /*val btnFlotane: View = findViewById(R.id.btnFlotante)
         btnFlotane.setOnClickListener { view ->
             val positiveButton = { dialog: DialogInterface, entero: Int -> }
 
@@ -49,8 +59,14 @@ class home_activity : AppCompatActivity() {
            /* Snackbar.make(view, "este es un snackbar", Snackbar.LENGTH_LONG)
                 .setAction("Action", null)
                 .show()*/
+        }*/
+        val btnFlotane: View = findViewById(R.id.btnFlotante)
+        btnFlotane.setOnClickListener { view ->
+            contexto(view)
         }
     }
+
+
 
     override fun onSupportNavigateUp(): Boolean {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragcontainer) as NavHostFragment
@@ -108,24 +124,25 @@ class home_activity : AppCompatActivity() {
             true
         }
 
-        /*R.id.nav_item_gastos->{
-            llamargastos(null)
-            true
-        }*/
-
-        /*R.id.nav_item_ingresos->{
-            llamaringresos(null)
-
-            true
-        }*/
-
         else -> {
             super.onOptionsItemSelected(item)
         }
-
-        // return super.onOptionsItemSelected(item)
     }
 
+    fun contexto(view:View){
+        val NavHostFrag: NavHostFragment= supportFragmentManager.findFragmentById(R.id.fragcontainer) as NavHostFragment
+        val frag: Fragment? =NavHostFrag.childFragmentManager?.fragments?.get(0)
+
+        if (frag is GastosFragment){
+        Toast.makeText(/* context = */ this, "Es gasto",/* text = */
+            Toast.LENGTH_SHORT).show()
+
+        }else if(frag is IngresosFragment)
+        {
+            Toast.makeText(/* context = */ this, "Es ingreso",/* text = */
+                Toast.LENGTH_SHORT).show()
+        }
+    }
     /*fun llamargastos(view: View?) {
         if (view != null) {
             Toast.makeText(this, getString(R.string.Toast_expenses), Toast.LENGTH_SHORT).show()

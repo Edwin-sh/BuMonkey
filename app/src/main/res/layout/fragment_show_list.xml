@@ -10,4 +10,4 @@
     android:paddingRight="16dp"
     app:layoutManager="LinearLayoutManager"
     tools:context=".fragments.GastosFragment"
-    tools:listitem="@layout/fragment_item_gastos" />
+    tools:listitem="@layout/fragment_item_show" />

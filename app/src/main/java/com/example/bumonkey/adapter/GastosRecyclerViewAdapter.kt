@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.bumonkey.entidades.Gastos
-import com.example.bumonkey.databinding.FragmentItemGastosBinding
+import com.example.bumonkey.databinding.FragmentItemShowBinding
 
 class GastosRecyclerViewAdapter(
     private val gastosList: List<Gastos>
@@ -14,7 +14,7 @@ class GastosRecyclerViewAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         return ViewHolder(
-            FragmentItemGastosBinding.inflate(
+            FragmentItemShowBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -30,10 +30,10 @@ class GastosRecyclerViewAdapter(
 
     override fun getItemCount(): Int = gastosList.size
 
-    inner class ViewHolder(binding: FragmentItemGastosBinding) :
+    inner class ViewHolder(binding: FragmentItemShowBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        private var nombreingreso: TextView = binding.textgastos
-        private var imagen= binding.imagengastos
+        private var nombreingreso: TextView = binding.textname
+        private var imagen= binding.image
 
         fun render(gastosmodel: Gastos) {
             nombreingreso.text = gastosmodel.nombreingreso
