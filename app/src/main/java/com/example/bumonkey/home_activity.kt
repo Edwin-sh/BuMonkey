@@ -1,41 +1,35 @@
 package com.example.bumonkey
 
-import android.content.DialogInterface
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.findFragment
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.navArgument
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.bumonkey.database.mySQLiteHelper
 import com.example.bumonkey.fragments.GastosFragment
 import com.example.bumonkey.fragments.IngresosFragment
 import com.google.android.material.navigation.NavigationView
 
 class home_activity : AppCompatActivity() {
     private lateinit var appbarConfiguration: AppBarConfiguration
+    lateinit var bumonkeyDBHelper: mySQLiteHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         setSupportActionBar(findViewById(R.id.toolbar))
+        bumonkeyDBHelper= mySQLiteHelper(this)
 
-        //llamaringresos(null)
+        bumonkeyDBHelper.crear_Datos_Iniciales()
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
@@ -48,21 +42,10 @@ class home_activity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appbarConfiguration)
         navView.setupWithNavController(navController)
 
-        /*val btnFlotane: View = findViewById(R.id.btnFlotante)
-        btnFlotane.setOnClickListener { view ->
-            val positiveButton = { dialog: DialogInterface, entero: Int -> }
-
-            val alert = AlertDialog.Builder(this).setTitle(R.string.Alert_dialog_tittle_help)
-                .setMessage(R.string.Alert_dialog_message_help)
-                .setPositiveButton("OK", positiveButton)
-                .create().show()
-           /* Snackbar.make(view, "este es un snackbar", Snackbar.LENGTH_LONG)
-                .setAction("Action", null)
-                .show()*/
-        }*/
         val btnFlotane: View = findViewById(R.id.btnFlotante)
         btnFlotane.setOnClickListener { view ->
             contexto(view)
+            bumonkeyDBHelper.crear_Datos_Iniciales()
         }
     }
 
@@ -143,41 +126,5 @@ class home_activity : AppCompatActivity() {
                 Toast.LENGTH_SHORT).show()
         }
     }
-    /*fun llamargastos(view: View?) {
-        if (view != null) {
-            Toast.makeText(this, getString(R.string.Toast_expenses), Toast.LENGTH_SHORT).show()
-        }
-        supportFragmentManager.beginTransaction()
-            .setReorderingAllowed(true)
-            .replace(R.id.fragcontainer, gastos_fragment::class.java, null, "tarea")
-            .commit()
-    }*/
-    /*fun llamaringresos(view: View?) {
-        if (view != null) {
-            Toast.makeText(this, getString(R.string.Toast_expenses), Toast.LENGTH_SHORT).show()
-        }
-
-        supportFragmentManager.beginTransaction()
-            .setReorderingAllowed(true)
-            .replace(R.id.fragcontainer, ingresos_fragment::class.java, null, "tarea2")
-            .commit()
-
-        /*val recyclerView=findViewById<RecyclerView>(R.id.reingresos)
-        recyclerView.layoutManager= LinearLayoutManager(this)
-        recyclerView.adapter= IngresosAdapter(ingresosProvider.ingresoslist)*/
-
-    }*/
-    /*
-    fun llamaringresos(view: View?) {
-        if (view != null) {
-            Toast.makeText(this, getString(R.string.Toast_earnings), Toast.LENGTH_SHORT).show()
-        }
-
-        supportFragmentManager.beginTransaction()
-            .setReorderingAllowed(true)
-            .replace(R.id.fragcontainer, ingresos_fragment::class.java, null, "tarea2")
-            .commit()
-    }
-    */
 
 }
