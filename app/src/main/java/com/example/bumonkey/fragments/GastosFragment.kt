@@ -1,5 +1,7 @@
 package com.example.bumonkey.fragments
 
+import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -11,16 +13,27 @@ import android.view.ViewGroup
 import com.example.bumonkey.R
 import com.example.bumonkey.providers.GastosProvider
 import com.example.bumonkey.adapter.GastosRecyclerViewAdapter
+import com.example.bumonkey.adapter.IngresosRecyclerViewAdapter
+import com.example.bumonkey.database.mySQLiteHelper
 
 /**
  * A fragment representing a list of Items.
  */
 class GastosFragment : Fragment() {
 
+    private lateinit var bumonkeyDBHelper: mySQLiteHelper
+    private lateinit var  db: SQLiteDatabase
+    private lateinit var  cursor: Cursor
+
     private var columnCount = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        bumonkeyDBHelper = mySQLiteHelper(this.requireContext())
+
+        db = bumonkeyDBHelper.readableDatabase
+        cursor = db.rawQuery("SELECT * FROM cat_gastos", null)
 
         arguments?.let {
             columnCount = it.getInt(ARG_COLUMN_COUNT)
@@ -40,7 +53,9 @@ class GastosFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = GastosRecyclerViewAdapter(GastosProvider.gastoslist)
+                val adaptador= GastosRecyclerViewAdapter()
+                adaptador.GastosRecyclerViewAdapter(context, cursor)
+                adapter = adaptador
             }
         }
         return view

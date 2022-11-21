@@ -1,5 +1,7 @@
 package com.example.bumonkey.fragments
 
+import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -9,21 +11,32 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.bumonkey.R
-import com.example.bumonkey.providers.IngresosProvider
 import com.example.bumonkey.adapter.IngresosRecyclerViewAdapter
+import com.example.bumonkey.database.mySQLiteHelper
+import com.example.bumonkey.home_activity
 
 /**
  * A fragment representing a list of Items.
  */
 class IngresosFragment : Fragment() {
 
+    private lateinit var bumonkeyDBHelper: mySQLiteHelper
+    private lateinit var  db: SQLiteDatabase
+    private lateinit var  cursor: Cursor
+
+
     private var columnCount = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        arguments?.let {
-            columnCount = it.getInt(ARG_COLUMN_COUNT)
+        bumonkeyDBHelper = mySQLiteHelper(this.requireContext())
+
+        db = bumonkeyDBHelper.readableDatabase
+        cursor = db.rawQuery("SELECT * FROM cat_ingresos", null)
+
+        arguments?.let{
+        columnCount = it.getInt(ARG_COLUMN_COUNT)
         }
     }
 
@@ -40,7 +53,9 @@ class IngresosFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = IngresosRecyclerViewAdapter(IngresosProvider.ingresoslist)
+                val adaptador=IngresosRecyclerViewAdapter()
+                adaptador.IngresosRecyclerViewAdapter(context, cursor)
+                adapter = adaptador
             }
         }
         return view
