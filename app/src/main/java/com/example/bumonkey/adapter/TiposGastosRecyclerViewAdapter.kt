@@ -4,10 +4,12 @@ import android.content.Context
 import android.database.Cursor
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
+import android.view.View
+import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import com.example.bumonkey.databinding.FragmentItemTipoBinding
-import com.example.bumonkey.databinding.FragmentObjetoBinding
 
 import com.example.bumonkey.placeholder.PlaceholderContent.PlaceholderItem
 
@@ -15,7 +17,9 @@ import com.example.bumonkey.placeholder.PlaceholderContent.PlaceholderItem
  * [RecyclerView.Adapter] that can display a [PlaceholderItem].
  * TODO: Replace the implementation with code for your data type.
  */
-class TiposGastosRecyclerViewAdapter() : RecyclerView.Adapter<TiposGastosRecyclerViewAdapter.ViewHolder>() {
+class TiposGastosRecyclerViewAdapter(
+    private val listener:OnItemClickListener
+) : RecyclerView.Adapter<TiposGastosRecyclerViewAdapter.ViewHolder>() {
 
     lateinit var context: Context
     lateinit var cursor: Cursor
@@ -24,6 +28,7 @@ class TiposGastosRecyclerViewAdapter() : RecyclerView.Adapter<TiposGastosRecycle
         this.context=context
         this.cursor=cursor
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -40,23 +45,32 @@ class TiposGastosRecyclerViewAdapter() : RecyclerView.Adapter<TiposGastosRecycle
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         cursor.moveToPosition(position)
         holder.render(cursor)
+
     }
 
     override fun getItemCount(): Int = cursor.count
 
-    inner class ViewHolder(binding: FragmentItemTipoBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(binding: FragmentItemTipoBinding) : RecyclerView.ViewHolder(binding.root),
+        OnClickListener{
 
         private var nombreingreso: TextView = binding.textname
         private var imagen= binding.image2
 
+        init {
+            itemView.setOnClickListener(this)
+        }
         fun render(cursor: Cursor) {
             val renderImg:Render=Render()
-
             val nombre=cursor.getString(1)
             nombreingreso.text = nombre
             imagen.setImageResource(renderImg.setImage(nombre))
         }
 
+        override fun onClick(v: View?) {
+            listener.onItemClick(nombreingreso.text.toString())
+        }
     }
-
+    interface OnItemClickListener{
+        fun onItemClick(name:String)
+    }
 }

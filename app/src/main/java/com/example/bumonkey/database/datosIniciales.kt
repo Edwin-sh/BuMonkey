@@ -4,6 +4,24 @@ import android.content.ContentValues
 
 public class datosIniciales(){
 
+    fun crear_user(db:mySQLiteHelper){
+
+        val tb=db.readableDatabase
+        val cursor = tb.rawQuery("SELECT * FROM user", null)
+
+        if (cursor.count < 1){
+            val datos1= ContentValues()
+            datos1.put("nombre","User Bumonkey")
+            datos1.put("correo","bumonkey@gmail.com")
+            datos1.put("user","bumonkey")
+            datos1.put("password","GP3")
+            datos1.put("cash","50000")
+
+            val db=db.writableDatabase  // la base de datos se pone en modo de escritura
+            db.insert("user",null,datos1)
+        }
+    }
+
     fun crear_tipos_gastos(db:mySQLiteHelper){
 
         val tb=db.readableDatabase

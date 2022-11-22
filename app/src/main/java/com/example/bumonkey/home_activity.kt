@@ -5,21 +5,19 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.bumonkey.adapter.Render
 import com.example.bumonkey.database.mySQLiteHelper
-import com.example.bumonkey.fragments.GastosFragment
-import com.example.bumonkey.fragments.IngresosFragment
-import com.example.bumonkey.fragments.TiposGastosFragment
-import com.example.bumonkey.fragments.TiposIngresosFragment
+import com.example.bumonkey.fragments.*
 import com.google.android.material.navigation.NavigationView
 
 class home_activity : AppCompatActivity() {
@@ -33,6 +31,7 @@ class home_activity : AppCompatActivity() {
         bumonkeyDBHelper= mySQLiteHelper(this)
 
         bumonkeyDBHelper.crear_Datos_Iniciales()
+        mostrarDatosUsuario(findViewById(R.id.txtViewCash), bumonkeyDBHelper)
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
@@ -48,6 +47,11 @@ class home_activity : AppCompatActivity() {
         val btnFlotane: View = findViewById(R.id.btnFlotante)
         btnFlotane.setOnClickListener { view ->
             contexto(view)
+        }
+
+        val btnFlotaneHistory: View = findViewById(R.id.buttonHistorial)
+        btnFlotaneHistory.setOnClickListener { view ->
+            historyContexto(view)
         }
 
         /*supportFragmentManager.registerFragmentLifecycleCallbacks(object:FragmentManager.FragmentLifecycleCallbacks(){
@@ -143,19 +147,47 @@ class home_activity : AppCompatActivity() {
         val frag: Fragment? =NavHostFrag.childFragmentManager?.fragments?.get(0)
 
         if (frag is GastosFragment){
-        Toast.makeText(/* context = */ this, "Es gasto",/* text = */
-            Toast.LENGTH_SHORT).show()
             val fragm=supportFragmentManager.beginTransaction()
             fragm.replace(R.id.fragcontainer, TiposGastosFragment()).addToBackStack(null)
             fragm.commit()
 
         }else if(frag is IngresosFragment)
-        {Toast.makeText(/* context = */ this, "Es ingreso",/* text = */
-            Toast.LENGTH_SHORT).show()
+        {
             val fragm=supportFragmentManager.beginTransaction()
             fragm.replace(R.id.fragcontainer, TiposIngresosFragment()).addToBackStack(null)
             fragm.commit()
         }
+
     }
 
+    fun historyContexto(view:View){
+        val NavHostFrag: NavHostFragment= supportFragmentManager.findFragmentById(R.id.fragcontainer) as NavHostFragment
+        val frag: Fragment? =NavHostFrag.childFragmentManager?.fragments?.get(0)
+
+        if (frag is GastosFragment){
+            val fragm=supportFragmentManager.beginTransaction()
+            fragm.replace(R.id.fragcontainer, ResumenGastosFragment()).addToBackStack(null)
+            fragm.commit()
+
+        }else if(frag is IngresosFragment)
+        {
+            val fragm=supportFragmentManager.beginTransaction()
+            fragm.replace(R.id.fragcontainer, ResumenIngresosFragment()).addToBackStack(null)
+            fragm.commit()
+        }
+
+    }
+    companion object{
+        fun mostrarDatosUsuario(view: View, bumonkeyDBHelper: mySQLiteHelper){
+            val db=bumonkeyDBHelper.readableDatabase
+            val cursor = db.rawQuery("SELECT * FROM user", null)
+            val render = Render()
+            if (cursor.count>0){
+                val c: Boolean =cursor.moveToLast()
+                val cash: String = render.format(cursor.getInt(5))
+                val textVIew: TextView? =view.findViewById(R.id.txtViewCash)
+                textVIew?.text=cash
+            }
+        }
+    }
 }

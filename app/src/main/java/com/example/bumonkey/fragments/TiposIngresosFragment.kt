@@ -19,7 +19,7 @@ import com.example.bumonkey.placeholder.PlaceholderContent
 /**
  * A fragment representing a list of Items.
  */
-class TiposIngresosFragment : Fragment() {
+class TiposIngresosFragment : Fragment(), TiposGastosRecyclerViewAdapter.OnItemClickListener{
 
     private lateinit var bumonkeyDBHelper: mySQLiteHelper
     private lateinit var  db: SQLiteDatabase
@@ -46,6 +46,7 @@ class TiposIngresosFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_tipo_list, container, false)
 
+        val item=this
         // Set the adapter
         if (view is RecyclerView) {
             with(view) {
@@ -53,8 +54,8 @@ class TiposIngresosFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                val adaptador= TiposGastosRecyclerViewAdapter()
-                adaptador.TiposGastosRecyclerViewAdapter(context, cursor)
+                val adaptador= TiposIngresosRecyclerViewAdapter(item)
+                adaptador.TiposIngresosRecyclerViewAdapter(context, cursor)
                 adapter = adaptador
             }
         }
@@ -74,5 +75,18 @@ class TiposIngresosFragment : Fragment() {
                     putInt(ARG_COLUMN_COUNT, columnCount)
                 }
             }
+    }
+
+    override fun onItemClick(name: String) {
+        var data=Bundle()
+        data.putString("tipo","ingreso")
+        data.putString("nombre",name)
+
+        var fragment= NuevoRegistroFragment()
+        fragment.arguments=data
+
+        val fragm=requireFragmentManager().beginTransaction()
+        fragm.replace(R.id.fragcontainer, fragment).addToBackStack(null)
+        fragm.commit()
     }
 }

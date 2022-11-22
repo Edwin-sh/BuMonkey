@@ -1,6 +1,7 @@
 package com.example.bumonkey.adapter
 
 import com.example.bumonkey.R
+import java.text.DecimalFormat
 
 class Render(){
     fun setImage(nombre:String): Int {
@@ -32,5 +33,10 @@ class Render(){
                 return R.drawable.ic_launcher_background
             }
         }
+    }
+
+    fun format(value:Int):String{
+        //val df:DecimalFormat= DecimalFormat("#,###.##")
+        return value.toString()
     }
 }

@@ -10,21 +10,22 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.example.bumonkey.R
-import com.example.bumonkey.adapter.TiposGastosRecyclerViewAdapter
+import com.example.bumonkey.adapter.GastosRecyclerViewAdapter
+import com.example.bumonkey.adapter.IngresosRecyclerViewAdapter
+import com.example.bumonkey.adapter.ResumenGastosRecyclerViewAdapter
 import com.example.bumonkey.database.mySQLiteHelper
 
 /**
  * A fragment representing a list of Items.
  */
-class TiposGastosFragment() : Fragment(), TiposGastosRecyclerViewAdapter.OnItemClickListener{
+class ResumenIngresosFragment : Fragment() {
+
     private lateinit var bumonkeyDBHelper: mySQLiteHelper
     private lateinit var  db: SQLiteDatabase
     private lateinit var  cursor: Cursor
 
-    private var columnCount = 2
+    private var columnCount = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +33,7 @@ class TiposGastosFragment() : Fragment(), TiposGastosRecyclerViewAdapter.OnItemC
         bumonkeyDBHelper = mySQLiteHelper(this.requireContext())
 
         db = bumonkeyDBHelper.readableDatabase
-        cursor = db.rawQuery("SELECT * FROM cat_gastos", null)
+        cursor = db.rawQuery("SELECT * FROM reg_ingresos", null)
 
         arguments?.let {
             columnCount = it.getInt(ARG_COLUMN_COUNT)
@@ -43,9 +44,8 @@ class TiposGastosFragment() : Fragment(), TiposGastosRecyclerViewAdapter.OnItemC
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_tipo_list, container, false)
+        val view = inflater.inflate(R.layout.fragment_show_list, container, false)
 
-        val item=this
         // Set the adapter
         if (view is RecyclerView) {
             with(view) {
@@ -53,8 +53,8 @@ class TiposGastosFragment() : Fragment(), TiposGastosRecyclerViewAdapter.OnItemC
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                val adaptador= TiposGastosRecyclerViewAdapter(item)
-                adaptador.TiposGastosRecyclerViewAdapter(context, cursor)
+                val adaptador= ResumenGastosRecyclerViewAdapter()
+                adaptador.ResumenGastosRecyclerViewAdapter(context, cursor)
                 adapter = adaptador
             }
         }
@@ -69,25 +69,10 @@ class TiposGastosFragment() : Fragment(), TiposGastosRecyclerViewAdapter.OnItemC
         // TODO: Customize parameter initialization
         @JvmStatic
         fun newInstance(columnCount: Int) =
-            TiposGastosFragment().apply {
+            ResumenIngresosFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_COLUMN_COUNT, columnCount)
                 }
             }
     }
-
-    override fun onItemClick(name: String) {
-        var data=Bundle()
-        data.putString("tipo","gasto")
-        data.putString("nombre",name)
-
-        var fragment= NuevoRegistroFragment()
-        fragment.arguments=data
-
-        val fragm=requireFragmentManager().beginTransaction()
-        fragm.replace(R.id.fragcontainer, fragment).addToBackStack(null)
-        fragm.commit()
-
-    }
-
 }

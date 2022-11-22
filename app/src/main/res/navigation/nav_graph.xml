@@ -20,15 +20,22 @@
         android:id="@+id/TipoGastoFragment"
         android:name="com.example.bumonkey.fragments.TiposIngresosFragment"
         android:label="fragment_historico_list"
-        tools:layout="@layout/fragment_tipo_list" >
-    </fragment>
+        tools:layout="@layout/fragment_tipo_list" />
 
     <fragment
         android:id="@+id/TipoIngresoFragment"
         android:name="com.example.bumonkey.fragments.TiposIngresosFragment"
         android:label="fragment_historico_list"
-        tools:layout="@layout/fragment_tipo_list" >
-    </fragment>
+        tools:layout="@layout/fragment_tipo_list" />
+    <fragment
+        android:id="@+id/resumenGastosFragment"
+        android:name="com.example.bumonkey.fragments.ResumenGastosFragment"
+        android:label="ResumenGastosFragment"
+        tools:layout="@layout/fragment_show_list"/>
+    <fragment
+        android:id="@+id/resumenIngresosFragment"
+        android:name="com.example.bumonkey.fragments.ResumenIngresosFragment"
+        tools:layout="@layout/fragment_show_list"/>
 
 
 </navigation>
